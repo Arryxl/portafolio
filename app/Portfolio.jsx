@@ -56,7 +56,7 @@ const PERSONAL = {
   whatsapp: 'https://wa.me/573138292765',
   bio: 'Desarrollador de Software full stack y cofundador de Solucionalo.co. Construyo aplicaciones web, automatizaciones y soluciones con IA —agentes, asistentes inteligentes y búsqueda semántica— que ayudan a empresas y emprendedores a optimizar sus procesos. Tecnólogo en Análisis y Desarrollo de Software del SENA y Mejor Aprendiz de mi promoción.',
   shortBio:
-    'Transformo ideas en productos funcionales, escalables y centrados en resolver problemas reales. Frontend y backend: de la interfaz que usa el cliente hasta la API, la base de datos y el modelo de IA que hay detrás.',
+    'Frontend y backend de punta a punta: desde la interfaz que usa el cliente hasta la API, la base de datos y el modelo de IA que hay detrás. Me apasiona convertir un problema de negocio en software que la gente realmente usa.',
 };
 
 const STATS = [
@@ -71,7 +71,7 @@ const EXPERIENCE = [
     role: 'Desarrollador de Software',
     company: 'Solucionalo.co',
     badge: 'Cofundador',
-    period: 'Septiembre 2025 – Actualidad',
+    period: 'Marzo 2026 – Actualidad',
     location: 'Remoto',
     active: true,
     description:
@@ -1706,8 +1706,8 @@ const ExperienceSection = () => {
           Por dónde he <em>pasado</em>.
         </h2>
         <p className="ax-lead" style={{ marginBottom: 56 }}>
-          De enseñar programación a estudiantes hasta co-fundar una startup. Cada paso ha sumado a
-          la forma en que pienso el producto.
+          De enseñar programación a estudiantes hasta cofundar una startup y construir soluciones de
+          IA en producción. Cada paso ha sumado a la forma en que pienso el producto.
         </p>
         <div className="ax-timeline">
           {EXPERIENCE.map((e, i) => (
