@@ -20,6 +20,9 @@ import {
   AlertCircle,
   Sparkles,
   Code2,
+  Bot,
+  Workflow,
+  Database,
 } from 'lucide-react';
 
 /* ============================================================
@@ -42,7 +45,7 @@ const PERSONAL = {
   name: 'Juan Reyes',
   firstName: 'Juan',
   lastName: 'Reyes',
-  title: 'Software Developer · Frontend Specialist',
+  title: 'Desarrollador de Software Full Stack · IA aplicada',
   location: 'Ibagué, Tolima, Colombia',
   email: 'juan@arryxl.me',
   github: 'https://github.com/Arryxl',
@@ -51,38 +54,38 @@ const PERSONAL = {
   linkedinLabel: 'linkedin.com/in/juansreyes',
   domain: 'arryxl.me',
   whatsapp: 'https://wa.me/573138292765',
-  bio: 'Desarrollador con enfoque en frontend, 18 años. Apasionado por crear productos web funcionales, atractivos y centrados en el usuario. Actualmente en prácticas profesionales y co-fundando una startup de software. Certificado como mejor aprendiz de su promoción en el SENA.',
+  bio: 'Desarrollador de Software full stack y cofundador de Solucionalo.co. Construyo aplicaciones web, automatizaciones y soluciones con IA —agentes, asistentes inteligentes y búsqueda semántica— que ayudan a empresas y emprendedores a optimizar sus procesos. Tecnólogo en Análisis y Desarrollo de Software del SENA y Mejor Aprendiz de mi promoción.',
   shortBio:
-    'Construyo productos web rápidos, accesibles y bien diseñados. Me obsesiona el detalle, la consistencia visual y escribir código que el equipo entienda en seis meses.',
+    'Transformo ideas en productos funcionales, escalables y centrados en resolver problemas reales. Frontend y backend: de la interfaz que usa el cliente hasta la API, la base de datos y el modelo de IA que hay detrás.',
 };
 
 const STATS = [
-  { value: '18', label: 'Años' },
-  { value: '4+', label: 'Años construyendo' },
+  { value: '5+', label: 'Años construyendo' },
+  { value: '2', label: 'Productos IA en desarrollo' },
   { value: '40+', label: 'Estudiantes certificados' },
-  { value: '3', label: 'Proyectos activos' },
+  { value: 'B2', label: 'Inglés profesional' },
 ];
 
 const EXPERIENCE = [
   {
-    role: 'Aprendiz de Desarrollo',
-    company: 'Bingo Verano',
-    badge: 'Prácticas',
-    period: 'Enero 2026 – Actualidad',
-    location: 'Ibagué',
-    active: true,
-    description:
-      'Desarrollo de funcionalidades, corrección de bugs, mejoras de interfaz, control de versiones y trabajo orientado a objetivos dentro del equipo técnico.',
-  },
-  {
     role: 'Desarrollador de Software',
     company: 'Solucionalo.co',
-    badge: 'Co-fundador',
+    badge: 'Cofundador',
     period: 'Septiembre 2025 – Actualidad',
     location: 'Remoto',
     active: true,
     description:
-      'Co-fundé esta startup de software. Construyendo un sistema POS con IA para retail y un agente IA conectado a WhatsApp que automatiza pedidos, reservas y seguimiento.',
+      'Cofundé esta startup de software, donde desarrollo soluciones tecnológicas que ayudan a empresas y emprendedores a optimizar sus procesos mediante aplicaciones web, automatización e inteligencia artificial. Actualmente construyo Evora POS —un sistema de punto de venta con IA para retail— y EvorAI, un agente conectado a WhatsApp que automatiza pedidos, reservas y seguimiento de clientes.',
+  },
+  {
+    role: 'Desarrollador de Software',
+    company: 'Bingo Verano',
+    badge: 'Prácticas profesionales',
+    period: 'Enero 2026 – Julio 2026',
+    location: 'Ibagué',
+    active: false,
+    description:
+      'Participé en el desarrollo de sistemas administrativos, integraciones con servicios externos y soluciones basadas en IA: asistentes inteligentes, agentes de IA y búsqueda semántica mediante embeddings y vectorización, integrando Google Gemini y Cloudflare para ofrecer análisis, automatización y apoyo en la toma de decisiones. Trabajo en equipo bajo metodologías ágiles y control de versiones con Git.',
   },
   {
     role: 'Instructor de Programación',
@@ -128,6 +131,17 @@ const PROJECTS = [
     stack: ['NestJS', 'Next.js', 'PostgreSQL', 'Redis'],
   },
   {
+    id: 'asistente-ia',
+    featured: false,
+    status: 'Completado',
+    title: 'Asistente IA con búsqueda semántica',
+    company: 'Bingo Verano',
+    description:
+      'Asistente inteligente integrado a los sistemas administrativos de la empresa. Implementé búsqueda semántica mediante embeddings y vectorización sobre los datos del negocio, conectada a Google Gemini para entregar análisis y apoyo en la toma de decisiones.',
+    stack: ['Google Gemini', 'Embeddings', 'Cloudflare', 'TypeScript'],
+    period: 'Enero 2026 – Julio 2026',
+  },
+  {
     id: 'sieki',
     featured: false,
     status: 'Completado',
@@ -144,7 +158,7 @@ const EDUCATION = [
   {
     institution: 'SENA',
     program: 'Tecnólogo en Análisis y Desarrollo de Software',
-    period: 'Abril 2024 – Julio 2026',
+    period: 'Abril 2024 – Julio 2026 · Finalizado',
     highlight: true,
     award: 'Mejor Aprendiz 2024',
     note: 'Resolución 73-03429 · Noviembre 2024',
@@ -164,7 +178,11 @@ const STACK_GROUPS = [
   },
   {
     label: 'Backend',
-    items: ['NestJS', 'Node.js', 'Python'],
+    items: ['NestJS', 'Node.js', 'Python', 'Django', 'APIs REST'],
+  },
+  {
+    label: 'IA & Automatización',
+    items: ['Google Gemini', 'Agentes de IA', 'Embeddings', 'Búsqueda semántica', 'Vectorización', 'Cloudflare'],
   },
   {
     label: 'Bases de datos',
@@ -172,7 +190,7 @@ const STACK_GROUPS = [
   },
   {
     label: 'Herramientas',
-    items: ['Git', 'GitHub', 'Docker'],
+    items: ['Git', 'GitHub', 'Docker', 'Metodologías ágiles'],
   },
   {
     label: 'Idiomas',
@@ -180,8 +198,49 @@ const STACK_GROUPS = [
   },
 ];
 
+const SKILLS = [
+  {
+    icon: Bot,
+    title: 'IA aplicada al negocio',
+    description:
+      'Asistentes inteligentes y agentes de IA que automatizan procesos reales: búsqueda semántica con embeddings y vectorización, e integración con Google Gemini para análisis y apoyo en la toma de decisiones.',
+    tags: ['Google Gemini', 'Agentes IA', 'Embeddings', 'Búsqueda semántica'],
+  },
+  {
+    icon: Code2,
+    title: 'Desarrollo full stack',
+    description:
+      'Del frontend al backend: interfaces con React, Next.js y Angular sobre APIs en NestJS y Python. Código tipado, componentes reutilizables y arquitecturas pensadas para escalar.',
+    tags: ['TypeScript', 'React', 'Angular', 'NestJS'],
+  },
+  {
+    icon: Workflow,
+    title: 'Automatización e integraciones',
+    description:
+      'Conecto sistemas que antes no se hablaban: integraciones con servicios externos, flujos automatizados y despliegue sobre Cloudflare para eliminar el trabajo manual repetitivo.',
+    tags: ['Integraciones', 'Cloudflare', 'Webhooks', 'APIs'],
+  },
+  {
+    icon: Database,
+    title: 'Datos y sistemas administrativos',
+    description:
+      'Modelado y consultas sobre PostgreSQL y SQL Server. Experiencia construyendo sistemas administrativos que sostienen la operación diaria de un negocio.',
+    tags: ['PostgreSQL', 'SQL Server', 'Redis'],
+  },
+];
+
+const SOFT_SKILLS = [
+  'Responsable',
+  'Analítico',
+  'Aprendizaje continuo',
+  'Trabajo en equipo',
+  'Orientado a resultados',
+  'Resolución de problemas',
+];
+
 const NAV_LINKS = [
   { id: 'about', label: 'Sobre mí' },
+  { id: 'skills', label: 'Aptitudes' },
   { id: 'stack', label: 'Stack' },
   { id: 'projects', label: 'Proyectos' },
   { id: 'experience', label: 'Experiencia' },
@@ -633,6 +692,25 @@ const GlobalStyles = () => (
       max-width: 580px;
       margin: 0 0 40px;
     }
+    .ax-hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 36px;
+    }
+    .ax-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      border-radius: 100px;
+      background: rgba(27,107,69,0.14);
+      border: 1px solid rgba(45,158,106,0.28);
+      color: #D4D4D8;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .ax-hero-tag svg { color: var(--green-l); }
     .ax-hero-actions {
       display: flex;
       flex-wrap: wrap;
@@ -739,6 +817,60 @@ const GlobalStyles = () => (
       color: var(--text-light);
       font-family: 'JetBrains Mono', monospace;
       letter-spacing: 0.5px;
+    }
+
+    /* Skills */
+    .ax-skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .ax-skill-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--green-xl);
+      color: var(--green);
+      margin-bottom: 18px;
+    }
+    .ax-skill-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 10px;
+    }
+    .ax-skill-desc {
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 15px;
+      margin: 0 0 18px;
+    }
+    .ax-skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .ax-soft-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-soft);
+    }
+    .ax-soft-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      width: 100%;
+      margin-bottom: 4px;
     }
 
     /* Stack */
@@ -1115,6 +1247,7 @@ const GlobalStyles = () => (
     @media (max-width: 900px) {
       .ax-about-grid { grid-template-columns: 1fr; gap: 32px; }
       .ax-stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .ax-skills-grid { grid-template-columns: 1fr; }
       .ax-projects-grid { grid-template-columns: 1fr; }
       .ax-project-featured { grid-column: span 1; padding: 32px; }
       .ax-project-featured-content { grid-template-columns: 1fr; gap: 20px; }
@@ -1274,6 +1407,20 @@ const HeroSection = ({ onScrollTo }) => (
       </h1>
       <p className="ax-hero-title">{PERSONAL.title}</p>
       <p className="ax-hero-bio">{PERSONAL.bio}</p>
+      <div className="ax-hero-tags">
+        <span className="ax-hero-tag">
+          <Briefcase size={13} /> Cofundador · Solucionalo.co
+        </span>
+        <span className="ax-hero-tag">
+          <Bot size={13} /> IA aplicada &amp; agentes
+        </span>
+        <span className="ax-hero-tag">
+          <Code2 size={13} /> Full Stack · TypeScript
+        </span>
+        <span className="ax-hero-tag">
+          <GraduationCap size={13} /> Tecnólogo ADSO · SENA
+        </span>
+      </div>
       <div className="ax-hero-actions">
         <button className="ax-btn ax-btn-primary" onClick={() => onScrollTo('projects')}>
           Ver proyectos <ArrowRight size={16} />
@@ -1331,7 +1478,10 @@ const AboutSection = () => {
                 <MapPin size={14} /> {PERSONAL.location}
               </span>
               <span className="ax-about-meta-row">
-                <Calendar size={14} /> 18 años · Construyendo desde 2020
+                <GraduationCap size={14} /> Tecnólogo en Análisis y Desarrollo de Software
+              </span>
+              <span className="ax-about-meta-row">
+                <Calendar size={14} /> Construyendo desde 2020
               </span>
               <span className="ax-about-meta-row ax-mono" style={{ fontSize: 12 }}>
                 {PERSONAL.domain}
@@ -1340,15 +1490,19 @@ const AboutSection = () => {
           </div>
           <div>
             <h2 className="ax-h2">
-              Construyo productos web <em>rápidos</em>, accesibles
-              <br />y bien <em>diseñados</em>.
+              Transformo ideas en productos <em>funcionales</em>,
+              <br />escalables y que <em>resuelven</em> problemas reales.
             </h2>
             <p className="ax-lead">{PERSONAL.shortBio}</p>
             <p className="ax-lead" style={{ marginTop: 16 }}>
-              Hoy mi día se reparte entre prácticas profesionales en Bingo Verano y co-fundar{' '}
-              <strong style={{ color: 'var(--green)' }}>Solucionalo.co</strong>, donde estoy
-              construyendo un sistema POS con IA y un agente conectado a WhatsApp para automatizar
-              negocios reales.
+              Soy Desarrollador de Software y cofundador de{' '}
+              <strong style={{ color: 'var(--green)' }}>Solucionalo.co</strong>, donde construyo
+              soluciones que ayudan a empresas y emprendedores a optimizar sus procesos mediante
+              aplicaciones web, automatización e <strong style={{ color: 'var(--green)' }}>inteligencia artificial</strong>.
+              Vengo de una etapa profesional desarrollando sistemas administrativos, integraciones
+              con servicios externos y soluciones de IA —agentes, asistentes inteligentes y búsqueda
+              semántica— y acabo de finalizar mi Tecnología en Análisis y Desarrollo de Software en
+              el SENA.
             </p>
             <div className="ax-stats-grid">
               {STATS.map((s) => (
@@ -1365,19 +1519,67 @@ const AboutSection = () => {
   );
 };
 
+const SkillsSection = () => {
+  const ref = useReveal();
+  return (
+    <section id="skills" className="ax-section" style={{ paddingTop: 0 }}>
+      <div ref={ref} className="ax-reveal ax-container">
+        <span className="ax-section-label">02 — Aptitudes</span>
+        <div className="ax-rule" />
+        <h2 className="ax-h2">
+          En qué puedo <em>aportar</em> desde el primer día.
+        </h2>
+        <p className="ax-lead">
+          Experiencia real en frontend y backend, con foco en soluciones de IA que generan valor
+          medible para las organizaciones y sus usuarios.
+        </p>
+        <div className="ax-skills-grid">
+          {SKILLS.map((skill) => {
+            const Icon = skill.icon;
+            return (
+              <article key={skill.title} className="ax-card">
+                <div className="ax-skill-icon">
+                  <Icon size={20} />
+                </div>
+                <h3 className="ax-skill-title">{skill.title}</h3>
+                <p className="ax-skill-desc">{skill.description}</p>
+                <div className="ax-skill-tags">
+                  {skill.tags.map((t) => (
+                    <span key={t} className="ax-pill-tech">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            );
+          })}
+        </div>
+        <div className="ax-soft-skills">
+          <span className="ax-soft-label">Además</span>
+          {SOFT_SKILLS.map((s) => (
+            <span key={s} className="ax-pill ax-pill-green">
+              <CheckCircle2 size={12} /> {s}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const StackSection = () => {
   const ref = useReveal();
   return (
     <section id="stack" className="ax-section ax-stack-section">
       <div ref={ref} className="ax-reveal ax-container">
-        <span className="ax-section-label">02 — Stack</span>
+        <span className="ax-section-label">03 — Stack</span>
         <div className="ax-rule" />
         <h2 className="ax-h2">
           Tecnologías con las que <em>trabajo</em> a diario.
         </h2>
         <p className="ax-lead" style={{ marginBottom: 32 }}>
-          Mi día a día está entre React, NestJS y bases de datos relacionales. Aprendo lo que
-          necesite el problema, no lo que esté de moda.
+          Mi día a día está entre React, NestJS, bases de datos relacionales y modelos de IA.
+          Aprendo lo que necesite el problema, no lo que esté de moda.
         </p>
         <div>
           {STACK_GROUPS.map((group) => (
@@ -1406,14 +1608,14 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="ax-section">
       <div ref={ref} className="ax-reveal ax-container">
-        <span className="ax-section-label">03 — Proyectos</span>
+        <span className="ax-section-label">04 — Proyectos</span>
         <div className="ax-rule" />
         <h2 className="ax-h2">
           Algunas cosas que estoy <em>construyendo</em>.
         </h2>
         <p className="ax-lead" style={{ marginBottom: 48 }}>
-          Trabajo principalmente en productos propios y proyectos formativos. Aquí lo más reciente y
-          relevante.
+          Productos propios, soluciones de IA en entorno profesional y proyectos formativos. Aquí lo
+          más reciente y relevante.
         </p>
         <div className="ax-projects-grid">
           {featured && (
@@ -1498,7 +1700,7 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="ax-section">
       <div ref={ref} className="ax-reveal ax-container">
-        <span className="ax-section-label">04 — Experiencia</span>
+        <span className="ax-section-label">05 — Experiencia</span>
         <div className="ax-rule" />
         <h2 className="ax-h2">
           Por dónde he <em>pasado</em>.
@@ -1540,7 +1742,7 @@ const EducationSection = () => {
   return (
     <section id="education" className="ax-section">
       <div ref={ref} className="ax-reveal ax-container">
-        <span className="ax-section-label">05 — Educación</span>
+        <span className="ax-section-label">06 — Educación</span>
         <div className="ax-rule" />
         <h2 className="ax-h2">
           Formación <em>formal</em> y autodidacta.
@@ -1633,7 +1835,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="ax-section ax-contact">
       <div ref={ref} className="ax-reveal ax-container">
-        <span className="ax-section-label">06 — Contacto</span>
+        <span className="ax-section-label">07 — Contacto</span>
         <div className="ax-rule" />
         <h2 className="ax-h2">
           ¿Tienes una idea? <em>Hablemos</em>.
@@ -1846,6 +2048,7 @@ export default function App() {
       />
       <HeroSection onScrollTo={onScrollTo} />
       <AboutSection />
+      <SkillsSection />
       <StackSection />
       <ProjectsSection />
       <ExperienceSection />
