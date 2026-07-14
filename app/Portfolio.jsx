@@ -47,7 +47,7 @@ const PERSONAL = {
   lastName: 'Reyes',
   title: 'Desarrollador de Software Full Stack · IA aplicada',
   location: 'Ibagué, Tolima, Colombia',
-  email: 'juan@arryxl.me',
+  email: 'juanreyval99@gmail.com',
   github: 'https://github.com/Arryxl',
   githubLabel: 'github.com/Arryxl',
   linkedin: 'https://www.linkedin.com/in/juansreyes/',
